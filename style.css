@@ -1,7 +1,8 @@
 body {
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: 'Balsamiq Sans';
   color: #404042;
-  font-size: 18px;
+  font-size: 16px;
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -9,16 +10,6 @@ h1, h2, h3 {
   font-family: Balsamiq Sans;
 }
 
-a {
-  color: #1A48E3;
-  font-weight: bold;
-  text-decoration: none;
-  transition: .3s;
-}
-
-a:hover {
-  color: #CE2FAE;
-}
 
 p {
   color: #404042;
@@ -50,35 +41,36 @@ p {
 }
 
 .button-blue {
-  background-color: green;
+  background-color: orange;
+  font-weight: bold;
   color: white;
   padding: 16px 48px;
-  border-radius: 4px;
+  border-radius: 80px;
   display: inline-block;
   text-decoration: none;
-  transition: .3s;
+  transition: .7s;
 }
 
 .button-blue:hover {
-  background-color: #0D1EC6;
+  background-color: gold;
   color: white;
 }
 
 .card-white {
   background: pink;
-  box-shadow: 0 0 16px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.6);
+  border-radius: 70px;
   width: 200px;
   text-align: center;
   padding: 24px;
-  margin: 8px;
+  margin: 2px;
 }
 
 .card-white img {
   width: 180px;
   height: 180px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 40px;
 }
 
 .card-white h3 {
@@ -93,4 +85,43 @@ p {
 
 .footer p {
   color: white;
+  font-size: 12px;
+  opacity: 0.3
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1px;
+}
+
+/* Cards media queries */
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-white {
+    width: auto;
+  }
+}
+  
+/* Container media queries */
+@media (min-width: 500px) {
+  .container {
+    width: 400px;
+  }
+}
+
+
+@media (min-width: 800px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 800px;
+  }
 }
